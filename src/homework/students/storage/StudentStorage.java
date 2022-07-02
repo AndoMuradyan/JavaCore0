@@ -1,4 +1,6 @@
-package homework.students;
+package homework.students.storage;
+
+import homework.students.model.Student;
 
 public class StudentStorage {
     private Student[] array = new Student[10];
@@ -65,10 +67,18 @@ public class StudentStorage {
         return size;
     }
 
+    public Student getStudentByLessonName(int index) {
+        if (index < 0 || index >= size) {
 
-    int set(int index, String lesson) {
-        return array[index].setLesson(lesson);
+            return null;
+        }
+        return array[index];
     }
+
+
+//    int set(int index, String lesson) {
+//        return array[index].setLesson(lesson);
+//    }
 
 
 }

@@ -15,9 +15,6 @@ public class DynamicArray {
     }
 
 
-
-
-
     public void printArray() {
         for (int i = 0; i < size; i++) {
             System.out.println(array[i] + " ");
@@ -70,8 +67,11 @@ public class DynamicArray {
 
     //Գրել մեթոդ set անունով, որը կընդունի int index, int value և վալյուն կդնի տրված ինդեքսի տեղը(կփոխարինի էղած արժեքին).
 
-    int set(int index, int value) {
-        return array[index] = value;
+    public void set(int index, int value) {
+        if (index >= 0 && index < size) {
+            array[index] = value;
+        }
+
     }
     //Գրել մեթոդ add(int index, int value) որը տրված վելյուն կդնի տրված ինդեքսի տեղը, իսկ էղած թիվը ու կողքի բոլոր թվերը կտանի աջ, ոչ մի թիվ չի կորի
 
