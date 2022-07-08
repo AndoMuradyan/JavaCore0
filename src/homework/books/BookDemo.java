@@ -49,7 +49,7 @@ public class BookDemo {
                 if (loginName.equals(registr.name) && password.equals(registr.password)) {
                     break;
                 } else {
-                    System.out.println("Please choose correct login and correct password");
+                    System.err.println("Please choose correct login and correct password");
 
 
                 }
