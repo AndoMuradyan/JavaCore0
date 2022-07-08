@@ -3,10 +3,14 @@ package homework.books;
 
 import homework.books.book.Author;
 import homework.books.book.Book;
-import homework.books.command.Commands;
+import homework.books.book.Registr;
 import homework.books.storage.AuthorStorage;
 import homework.books.storage.BookStorage;
+import homework.books.storage.RegistrStorage;
+
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
+
 import static homework.books.command.Commands.*;
 
 public class BookDemo {
@@ -14,14 +18,52 @@ public class BookDemo {
     private static Scanner scanner = new Scanner(System.in);
     private static BookStorage bookStorage = new BookStorage();
     private static AuthorStorage authorStorage = new AuthorStorage();
+    static RegistrStorage registrSt = new RegistrStorage();
+    static Registr registr = new Registr();
 
 
     public static void main(String[] args) {
-
         boolean run = true;
-        while (run) {
-            Commands.printCommand();
+        while (true) {
+            System.out.println("Please choose name");
+            registr.name = scanner.nextLine();
+            System.out.println("Please choose surname");
+            registr.surname = scanner.nextLine();
+            System.out.println("Please choose login");
+            registr.login = scanner.nextLine();
+            System.out.println("Please choose password");
+            registr.password = scanner.nextLine();
+
+            System.out.println("thanks for signing up!");
+
+            command();
             int command = Integer.parseInt(scanner.nextLine());
+            if (command == USERNAME_PASSWORD) {
+
+                registrSt.addRe();
+                System.out.println("Please choose login");
+                String loginName = scanner.nextLine();
+                System.out.println("Please choose Password");
+                String password = scanner.nextLine();
+
+                if (loginName.equals(registr.name) && password.equals(registr.password)) {
+                    break;
+                } else {
+                    System.out.println("Please choose correct login and correct password");
+
+
+                }
+            }
+        }
+        while (run) {
+            printCommand();
+            int command;
+            try {
+                command = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                command = -1;
+
+            }
             switch (command) {
                 case EXIT:
                     run = false;
@@ -50,9 +92,9 @@ public class BookDemo {
                 case DELETE_BOOK_BY_INDEX:
                     deleteByIndex();
                     break;
+
                 default:
                     System.out.println("invalid command");
-
 
             }
         }
@@ -136,7 +178,8 @@ public class BookDemo {
         System.out.println("please choose book index");
         int index = Integer.parseInt(scanner.nextLine());
         bookStorage.deleteByBook(index);
-
     }
 }
+
+
 

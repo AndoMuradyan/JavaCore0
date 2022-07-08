@@ -11,6 +11,7 @@ public interface Commands {
     int ADD_AUTHOR = 6;
     int PRINT_ALL_AUTHOR = 7;
     int DELETE_BOOK_BY_INDEX = 8;
+    int USERNAME_PASSWORD=1;
 
     static void printCommand() {
         System.out.println("please input " + EXIT + " for exit: ");
@@ -19,11 +20,16 @@ public interface Commands {
         System.out.println("please input " + PRINT_BOOKS_AUTHOR_NAME + "print author books : ");
         System.out.println("please input " + PRINT_BOOKS_BY_GENRE + " print books genre: ");
         System.out.println("please input " + PRINT_BOOKS_BY_PRICE_RANGE + " print books price range: ");
-        System.out.println("Please input " + ADD_AUTHOR + " for add author");
-        System.out.println("Please input " + PRINT_ALL_AUTHOR + " for print all author");
-        System.out.println("Please input " + DELETE_BOOK_BY_INDEX + " for delete all book");
+        System.out.println("Please input " + ADD_AUTHOR + " for add author: ");
+        System.out.println("Please input " + PRINT_ALL_AUTHOR + " for print all author: ");
+        System.out.println("Please input " + DELETE_BOOK_BY_INDEX + " for delete all book: ");
+
 
 
     }
+    static void command(){
+        System.out.println("Please input " + USERNAME_PASSWORD + " for login password: ");
+    }
+
 
 }
