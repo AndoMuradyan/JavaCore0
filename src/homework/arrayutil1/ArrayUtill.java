@@ -46,15 +46,15 @@ public class ArrayUtill {
 //        }
 
 //   6    Տպեք զույգերի քանակը։
-//        int[] array = {2, 5, 8, 10, 32, 22, 11, 66, 12, 30};
-//        int even = 0;
-//        for (int i = 0; i < array.length; i++) {
+        int[] array = {2, 5, 8, 10, 32, 22, 11, 66, 12, 30};
+        int even = 0;
+        for (int i = 0; i < array.length; i++) {
 //            if (array[i] % 2 == 0) {
-//                even++;
-//
+                even++;
+
 //            }
-//        }
-//        System.out.print(even);
+        }
+        System.out.print(even);
 
 //   7    Տպեք կենտերի քանակը
 //        int[] array = {2, 5, 8, 10, 32, 22, 11, 66, 12, 30};
