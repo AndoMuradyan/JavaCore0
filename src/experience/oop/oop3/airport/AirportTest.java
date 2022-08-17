@@ -35,5 +35,7 @@ public class AirportTest {
         service.printNewestMilitary(planes);
         System.out.println("-------------------");
         service.sortByReleaseYear(planes);
+
+
     }
 }
