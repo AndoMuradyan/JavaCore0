@@ -1,6 +1,6 @@
 package experience.oop.oop2;
 
-public class Test {
+public class Main {
     public static void main(String[] args) {
 //        qast gorcoxutyuny ashxatum e primitiv tipy primitiv tipi het
 //        chi ashxatum obyekty primitiv tipi het aysinkn Stringy inti
